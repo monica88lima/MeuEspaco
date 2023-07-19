@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mônica</title>
+  <link rel="icon" href="/imagens/favicon.ico" />
+  <link rel="stylesheet" href="/estilos.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Fundamentos da Programação Orientada a Objetos</h1>
+      <img src="/imagens/icons8-editar-propriedade-100.png" alt="linkedin" /></a>
+
+    </header>
+
+    <main>
+      <span><a href="/index.html">Voltar</a></span>
+      <h2>Resolução dos Exercícios seção 1</h2>
+
+      <article>
+        <ul>
+          <li>
+            <h3>
+              1 - DEFINA O QUE É CLASSE E O QUE É OBJETO E COMO PODEMOS
+              CRIÁ-LOS NA LINGUAGEM C#
+            </h3>
+            <p>
+              Em POO a objetos, uma classe é um modelo ou uma estrutura que
+              define um conjunto de propriedades e métodos que um objeto pode
+              ter. Ela é uma espécie de "planta" para a criação de objetos. A
+              classe define as características e comportamentos que os objetos
+              daquela classe terão. Um objeto, por sua vez, é uma instância de
+              uma classe. Ele representa um item ou entidade específica que
+              possui os atributos e comportamentos definidos pela classe. Em
+              outras palavras, um objeto é a materialização concreta de uma
+              classe. Na linguagem c# para criar a instancia da classe usamos a
+              palavra <strong>new</strong>
+
+            <h4>Definindo uma classe em C#:</h4>
+
+            <figure>
+              <img src="/curso-solid/imagens/DefinindoUmaClasse.JPG"
+                alt="Imagem do código com exemplo da estrutura de uma classe" />
+              <figcaption>
+                <code>
+                    class MinhaClasse { // Propriedades public int Id { get;
+                    set; } public string Nome { get; set; } // Método public
+                    void ExibirInformacoes() { Console.WriteLine("ID: " + Id);
+                    Console.WriteLine("Nome: " + Nome); } }
+                  </code>
+              </figcaption>
+            </figure>
+
+            <h4>Criando um objeto da classe em C#:</h4>
+            <figure>
+              <img src="/curso-solid/imagens/DefinindoUmObjeto.JPG"
+                alt="Imagem com código que apresenta a uma instância da classe" />
+              <figcaption>
+                <code>
+                    MinhaClasse meuObjeto = new MinhaClasse(); // Atribuindo
+                    valores às propriedades do objeto meuObjeto.Id = 1;
+                    meuObjeto.Nome = "Exemplo"; // Chamando um método do objeto
+                    meuObjeto.ExibirInformacoes();
+                  </code>
+              </figcaption>
+            </figure>
+            </p>
+
+          </li>
+          <li>
+            <h3>
+              2- COMO DEFINIR O CONCEITO DE ABSTRAÇÃO USADO NO PARADIGMA DA
+              POO C#
+            </h3>
+            <p>
+              No contexto da programação orientada a objetos (POO), a
+              abstração é um conceito fundamental que permite representar
+              objetos do mundo real em um programa de forma simplificada,
+              focando apenas nos aspectos relevantes para o sistema em
+              questão. Ela envolve a criação de classes e objetos que
+              encapsulam características e comportamentos específicos,
+              abstraindo detalhes complexos para tornar o sistema mais
+              compreensível e modular.
+              <br /><br />
+              A abstração na POO ajuda a simplificar o design do sistema,
+              tornando-o mais modular, flexível e fácil de entender. Isso
+              permite que os desenvolvedores se concentrem nos aspectos
+              essenciais de um objeto, ignorando detalhes irrelevantes ou
+              complexos. Isso é feito por meio da seleção cuidadosa das
+              características e comportamentos que serão representados na
+              classe, enquanto oculta os detalhes internos de implementação.
+            </p>
+          </li>
+          <li>
+            <h3>3- DE UM EXEMPLO DE ABSTRAÇÃO NO MUNDO REAL</h3>
+
+            Um exemplo de abstração no mundo real pode ser encontrado em um
+            sistema de uma biblioteca. Vamos considerar a abstração de um
+            objeto chamado "Livro". No contexto da biblioteca, um livro possui
+            várias características, como título, autor, ano de publicação,
+            número de páginas, entre outros. Ele também tem comportamentos
+            específicos, como emprestar, devolver e renovar.
+            <br /><br />
+
+            Ao aplicar a abstração na programação orientada a objetos, podemos
+            criar uma classe chamada "Livro" que encapsula essas
+            características e comportamentos relevantes.
+            <h4>Aqui um exemplo</h4>
+            <figure>
+              <img src="/curso-solid/imagens/ExemploAbstracao.JPG" alt="Código com exemplo de uma abstração" />
+              <figcaption>
+                <code>
+                    class Livro { public string Titulo { get; set; } public
+                    string Autor { get; set; } public int AnoPublicacao { get;
+                    set; } public int NumeroPaginas { get; set; } public void
+                    Emprestar() { // Lógica para emprestar o livro } public void
+                    Devolver() { // Lógica para devolver o livro } public void
+                    Renovar() { // Lógica para renovar o empréstimo do livro } }
+                  </code>
+              </figcaption>
+            </figure>
+            <br /><br />
+            Na classe "Livro", definimos as propriedades Titulo, Autor,
+            AnoPublicacao e NumeroPaginas, que representam as características
+            do livro. Também temos os métodos
+            <strong>Emprestar(), Devolver() e Renovar()</strong>, que
+            representam os comportamentos do livro. Essa abstração nos permite
+            interagir com os livros em um nível mais alto de abstração, sem
+            nos preocuparmos com os detalhes internos de implementação. Por
+            exemplo, podemos criar objetos da classe "Livro" e utilizar seus
+            métodos para emprestar, devolver ou renovar, sem precisar entender
+            como essas operações são realmente implementadas.
+          </li>
+          <li>
+            <h3>4-O QUE É ENCAPSULAMENO E QUAIS SAO OS SEUS BENEFICIOS</h3>
+            <p>
+              Encapsulamento é um conceito chave na programação orientada a
+              objetos (POO) que envolve o agrupamento de dados (propriedades)
+              e comportamentos (métodos) relacionados em uma única unidade
+              chamada classe.
+              <strong>
+                O objetivo do encapsulamento é ocultar os detalhes internos de
+                implementação de uma classe e fornecer uma interface externa
+                consistente para interagir com o objeto.</strong>
+            </p>
+            <ol>
+              <li>
+                <strong>Ocultação de detalhes internos:</strong> O
+                encapsulamento permite que os detalhes internos da
+                implementação de uma classe sejam ocultados. Isso significa
+                que outros componentes ou objetos externos não precisam
+                conhecer ou depender de como uma determinada classe realiza
+                suas operações internas. Isso facilita a modificação da
+                implementação interna sem afetar outros componentes do
+                sistema.
+              </li>
+              <br />
+
+              <li>
+                <strong>Proteção de dados:</strong> Através do encapsulamento,
+                é possível definir a visibilidade das propriedades e métodos
+                de uma classe. Propriedades podem ser definidas como públicas,
+                privadas ou protegidas, determinando quem tem acesso direto a
+                elas. Isso ajuda a proteger os dados internos de uma classe,
+                permitindo que sejam acessados e modificados apenas de acordo
+                com as regras definidas pela classe.
+              </li>
+              <br />
+              <li>
+                <strong>Modificação controlada:</strong> O encapsulamento
+                também permite que a implementação interna de uma classe seja
+                modificada de forma controlada. Ao encapsular os detalhes
+                internos, é possível fornecer métodos públicos ou interfaces
+                bem definidas para interagir com o objeto. Isso significa que,
+                mesmo que a implementação interna da classe seja alterada, a
+                interface externa permanece a mesma, o que minimiza o impacto
+                em outros componentes do sistema.
+              </li>
+              <br />
+              <li>
+                <strong>Reutilização de código:</strong> O encapsulamento
+                promove a reutilização de código ao permitir que objetos de
+                uma classe sejam usados em diferentes partes do sistema. Ao
+                fornecer uma interface consistente e bem definida, os objetos
+                encapsulados podem ser facilmente utilizados por outros
+                componentes sem precisar conhecer os detalhes internos da
+                classe.
+              </li>
+              <br />
+              <li>
+                <strong>Modularidade e organização:</strong> O encapsulamento
+                contribui para a modularidade do código, pois permite que as
+                funcionalidades relacionadas sejam agrupadas em classes. Isso
+                facilita a organização do código em unidades lógicas, o que
+                torna o sistema mais compreensível, facilitando a manutenção e
+                o desenvolvimento colaborativo.
+              </li>
+              <br />
+            </ol>
+          </li>
+          <li>
+            <h3>5-QUANDO UM CONTRUTOR DE UMA CLASSE É CHAMADO</h3>
+            <p>
+              Um construtor de uma classe é chamado quando um objeto dessa
+              classe é criado. Ele é responsável por inicializar o objeto,
+              definindo seus valores iniciais e executando qualquer lógica
+              necessária antes de o objeto ser utilizado.O construtor de uma
+              classe é identificado pelo nome da classe e não possui um tipo
+              de retorno explicitamente declarado. Ele pode receber
+              parâmetros, que são utilizados para fornecer informações
+              necessárias para a inicialização do objeto.
+              <br /><br />
+            </p>
+          </li>
+          <li>
+            <h3>
+              6-SE VC CRIAR 5 OBJETOS DE UMA CLASSE, QUANTAS VEZES O
+              CONSTRUTOR SERÁ CHAMADO
+            </h3>
+            <p>
+              Se você criar 5 objetos de uma classe, o construtor será chamado
+              5 vezes, uma vez para cada objeto criado. Cada objeto precisa
+              passar pelo processo de inicialização, e isso é feito chamando o
+              construtor da classe. Portanto, quando você usa o operador new
+              para criar um objeto, o construtor correspondente é chamado para
+              aquele objeto específico.
+              <br /><br />
+            </p>
+          </li>
+          <li>
+            <h3>7-POR QUE VOCÊ USA UM CONSTRUTOR?</h3>
+
+            <ol>
+              <li>
+                <strong>Inicialização de objetos:</strong> O construtor é
+                usado para inicializar o estado de um objeto quando ele é
+                criado. Isso envolve definir os valores iniciais das
+                propriedades e estabelecer o estado inicial do objeto. O
+                construtor garante que o objeto comece em um estado válido e
+                consistente.
+              </li>
+              <br />
+
+              <li>
+                <strong>Configuração de propriedades:</strong> O construtor
+                permite a configuração inicial das propriedades de um objeto.
+                Você pode passar argumentos para o construtor para definir os
+                valores das propriedades no momento da criação do objeto. Isso
+                permite uma personalização do objeto com base nas necessidades
+                do programador.
+              </li>
+              <br />
+              <li>
+                <strong> Execução de lógica inicial:</strong> O construtor
+                pode ser usado para executar lógica inicial ou preparatória
+                que deve ser realizada assim que o objeto for criado. Isso
+                pode incluir a alocação de recursos, a abertura de conexões
+                com bancos de dados ou a realização de outras tarefas
+                necessárias antes que o objeto esteja pronto para uso.
+              </li>
+              <br />
+              <li>
+                <strong>Controle de acesso:</strong> O construtor pode ser
+                usado para definir a visibilidade e o acesso aos membros de
+                uma classe. Você pode usar modificadores de acesso, como
+                <strong><i>public, private ou protected</i></strong>, para controlar quem pode criar instâncias da
+                classe e quais
+                membros são acessíveis externamente.
+              </li>
+              <br />
+              <li>
+                <strong>Sobrecarga de construtores:</strong> Em uma classe,
+                você pode ter vários construtores com diferentes assinaturas
+                (parâmetros). Isso permite a criação de objetos usando
+                construtores diferentes, dependendo das necessidades
+                específicas do momento.<br />
+                A sobrecarga de construtores fornece flexibilidade na criação
+                e inicialização de objetos.
+              </li>
+              <br />
+            </ol>
+            Ou seja, o construtor é usado para inicializar objetos, configurar
+            propriedades, executar lógica inicial, controlar acesso e fornecer
+            flexibilidade na criação de objetos. <br />
+            Ele desempenha um papel fundamental na criação de instâncias de
+            uma classe e garante que os objetos sejam devidamente configurados
+            e prontos para uso.
+          </li>
+          <li>
+            <h3>
+              8- CRIE UMA CLASSE PARA CALCULAR A SOMA DE 2 NUMEROS INTEIROS
+              E/OU REAIS USANDO O CONCEITO DE SOBRECARGA DE MÉTODOS. SE NENHUM
+              VALOR FOR INFORMADO RETORNE A MENSAGEM
+              <i>"NENHUM VALOR INFORMADO"</i>
+            </h3>
+            <figure>
+              <img src="/curso-solid/imagens/ClasseSomar.JPG"
+                alt="Criação de uma classe que utiliza a Sobrecarga no método Somar" />
+              <figcaption>
+                <code>
+                    public class Calcular { //propriedade private string
+                    MensagemPadrão { get; set; } public Calcular() {
+                    this.MensagemPadrão = "Nenhum valor informado"; } //métodos
+                    public void Somar(int numero1, int numero2) {
+                    Console.WriteLine(numero1 + numero2); } public void
+                    Somar(double numero1, double numero2) {
+                    Console.WriteLine(numero1 + numero2); } public void Somar()
+                    { Console.WriteLine(this.MensagemPadrão); } }
+                  </code>
+              </figcaption>
+            </figure>
+            <br /><br />
+          </li>
+          <li>
+            <h3>
+              9- CRIE UMA CLASSE PARA CALCULAR A SOMA DE ATÉ 4 NUMEROS USANDO
+              O CONCEITO DE PARAMETROS OPCIONAIS.
+            </h3>
+            <figure>
+              <img src="/curso-solid/imagens/ParametrosOpcionais.JPG" alt="" />
+              <figcaption>
+                <code>public static int Somar(int numero1 = 2, int numero2 = 2,
+                    int numero3 = 4, int numero4 = 2) { return (numero1 +
+                    numero2+ numero3+ numero4); }
+                  </code>
+              </figcaption>
+            </figure>
+            <br /><br />
+          </li>
+          <li>
+            <h3>10- QUAL O CONCEITO DE HERANÇA? DE EXEMPLOS</h3>
+            <p>
+              Herança é um conceito fundamental na programação orientada a
+              objetos (POO) que permite criar novas classes a partir de
+              classes existentes. É uma relação entre classes em que uma
+              classe derivada herda os membros (propriedades e métodos) de uma
+              classe base, adicionando ou modificando seu comportamento
+              conforme necessário. A classe derivada, também chamada de
+              subclasse ou classe filha, herda todas as características da
+              classe base, também conhecida como superclasse ou classe pai.
+              Isso significa que a classe derivada pode reutilizar o código da
+              classe base, estendendo-o ou personalizando-o para atender às
+              suas necessidades específicas. Um exemplo simples de herança
+              pode ser visto no contexto de uma hierarquia de classes
+              relacionadas a animais. Podemos ter uma classe base chamada
+              "Animal" e classes derivadas como "Cachorro", "Gato" e
+              "Pássaro". Veja o exemplo em C#:
+            </p>
+            <figure>
+              <img src="/curso-solid/imagens/Heranca.JPG" alt="" />
+              <figcaption>
+                <code>
+                  class Animal { public string Nome { get; set; } public void
+                  EmitirSom() { Console.WriteLine("O animal emite um som."); } }
+                  class Cachorro : Animal { public void Latir() {
+                  Console.WriteLine("O cachorro está latindo."); } } class Gato
+                  : Animal { public void Miar() { Console.WriteLine("O gato está
+                  miando."); } } class Passaro : Animal { public void Voar() {
+                  Console.WriteLine("O pássaro está voando."); } }
+                </code>
+
+              </figcaption>
+            </figure>
+            <br /><br />
+            <p>
+              Nesse exemplo, a classe "Animal" é a classe base que define a
+              propriedade "Nome" e o método "EmitirSom". As classes derivadas
+              "Cachorro", "Gato" e "Passaro" herdam essas características da
+              classe "Animal" e também têm comportamentos específicos
+              adicionais. A classe "Cachorro" herda a propriedade "Nome" e o
+              método "EmitirSom" da classe "Animal" e adiciona um novo método
+              "Latir". A classe "Gato" herda da classe "Animal" e adiciona o
+              método "Miar". A classe "Passaro" também herda da classe
+              "Animal" e adiciona o método "Voar". Essa hierarquia de classes
+              permite que você crie objetos de diferentes tipos de animais e
+              acesse os membros herdados da classe base, além dos membros
+              específicos de cada classe derivada. Por exemplo:
+            </p>
+            <figure>
+              <img src="/curso-solid/imagens/herancaMetodos.JPG" alt="" />
+              <figcaption>
+                <code>
+                    Cachorro cachorro = new Cachorro(); cachorro.Nome = "Rex";
+                    cachorro.EmitirSom(); cachorro.Latir(); Gato gato = new
+                    Gato(); gato.Nome = "Garfield"; gato.EmitirSom();
+                    gato.Miar(); Passaro passaro = new Passaro(); passaro.Nome =
+                    "Piu"; passaro.EmitirSom(); passaro.Voar();
+                  </code>
+              </figcaption>
+            </figure>
+            <br /><br />
+            <p>
+              Nesse trecho de código, criamos objetos de diferentes tipos de
+              animais e acessamos os membros herdados da classe "Animal", como
+              a propriedade "Nome" e o método "EmitirSom". Também podemos
+              acessar os membros específicos de cada classe derivada, como
+              "Latir" para o cachorro, "Miar" para o gato e "Voar" para o
+              pássaro.<br />
+              <strong><i>A herança permite a reutilização de código, promove a
+                  organização hierárquica de classes e facilita a criação de
+                  hierarquias mais complexas. Ela é um conceito poderoso na
+                  POO para modelar relações entre classes e promover a
+                  reutilização e extensibilidade do código.</i></strong>
+            </p>
+          </li>
+        </ul>
+      </article>
+    </main>
+
+    <footer>
+      <figure>
+        <a href="https://github.com/monica88lima?tab=repositories" target="_blank">
+          <img src="/imagens/icons8-divisão-de-código-50.png" alt=" git" /></a>
+
+        <a href="https://www.linkedin.com/in/monicalima/" target="_blank">
+          <img src="/imagens/icons8-linkedin-50.png" alt="linkedin" /></a>
+
+        <a href="tel:+55119521839">
+          <img src="/imagens/icons8-telefone-50.png" alt="telefone" /></a>
+      </figure>
+    </footer>
+  </div>
+</body>
+
+</html>

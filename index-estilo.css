@@ -8,7 +8,7 @@
 .container {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 20vh 60vh 20vh;
+    
     grid-template-areas: "header header"
         "main aside"
         "footer footer";
@@ -51,8 +51,8 @@ main {
     min-width: 100%;
     margin: 0 auto;
 
-    /* overflow: auto; */
-    /* height: 100vh; */
+    overflow: auto; 
+    height: 100vh; 
 
   
 
@@ -81,7 +81,6 @@ footer {
     align-items: center;
     justify-content: center;
     grid-area: footer;
-    
 
 }
 
@@ -161,7 +160,7 @@ footer:hover :not(:hover) {
     }
 
     footer {
-        position: fixed;
+        /* position: fixed; */
         bottom: 0;
     }
 
@@ -246,8 +245,5 @@ footer:hover :not(:hover) {
         width: 350px;
     }
 
-    footer {
-        position: fixed !important;
-        bottom: 0;
-    }
+   
 }

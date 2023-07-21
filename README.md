@@ -12,23 +12,19 @@ Criei uma página pra compartilhar meu desenvolvimento nos estudos.
 
 :dart: **Utilizarei a página como parte dos meus estudos em FrontEnd;**
 
-
-:computer:##-[Tecnologia](#tecnologia)
-
-Site: Html e Css
-
-
-
-:rocket:##-[Acesso ao site](#acesso-ao-site)
+:rocket:##[Acesso ao site](#acesso-ao-site)
 
 https://monica-me.netlify.app/
 
 
+:computer:##[Tecnologia](#tecnologia)
 
--[Pré-requisitos](#pré-requisitos)
+Site: Html e Css
+
+##[Pré-requisitos](#pré-requisitos)
 
 Visual Studio Code;
 
--[Extensões](#extensões)
+##[Extensões](#extensões)
 
 Live Server

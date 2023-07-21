@@ -19,7 +19,7 @@ https://monica-me.netlify.app/
 
 :computer:##[Tecnologia](#tecnologia)
 
-Site: Html e Css
+Html e Css
 
 ##[Pré-requisitos](#pré-requisitos)
 

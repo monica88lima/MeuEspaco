@@ -109,6 +109,10 @@ ul>li {
     display: flex;
     width: 100%;
   }
+  iframe{
+    
+    width: 100% !important;
+  }
 }
 
 #inicio {
@@ -152,5 +156,9 @@ footer {
     padding: 15px;
 
 
+  }
+  iframe{
+    
+    width: 100% !important; 
   }
 }

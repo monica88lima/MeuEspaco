@@ -1,37 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mônica</title>
-    <link rel="icon"  href="/imagens/favicon.ico">
-    <link rel = "stylesheet" href="estilos.css">
+    <title>Exercícios</title>
+    <link rel="icon" href="/imagens/favicon.ico">
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    
-    <header>
-        <h1>Fundamentos da Programação Orientada a Objetos</h1>
+    <div class="container">
+        <header>
+            <h1>UML, Herança, Interface e Polimorfismo</h1>
+            <img src="/imagens/icons8-editar-propriedade-100.png" alt="lista" /></a>
 
-    </header>
-    <main>
-        <span><a href="index.html">Voltar</a></span>
-       
-        
+        </header>
 
-    </main>
-    <footer>
-        <footer> 
+        <main>
+            <span><a href="/index.html">Voltar</a></span>
+            <h2>Resolução dos Exercícios seção 2</h2>
+
+            <article>
+                <ul>
+                    <li>
+                        <h3>
+                            1 - QUAIS OS PRINCIPAIS TIPOS DE RELACIONAMENTO PODEMOS TER ENTRE AS CLASSES E QUAL A
+                            PRINCIPAL VANTAGEM ELES OFERECEM?
+                        </h3>
+                        <p>
+                            <strong>Relacionamento do tipo é um: </strong>
+                            A herança é um tipo de relacionamento onde uma classe (subclasse ou classe derivada) herda
+                            atributos e métodos de outra classe (superclasse ou classe base).<br><br>
+
+                            <strong>Relacionamento do tipo contém um ou mais objetos (Todo-parte): </strong>
+                        <ul>
+                            <li>
+                                <p>A composição é uma forma de associação "todo-parte", mas com uma relação mais forte
+                                    entre a classe principal e as classes componentes. Nesse tipo de relacionamento, as
+                                    partes
+                                    são criadas e destruídas
+                                    juntamente com a classe principal.</p>
+
+                            </li>
+                            <li>
+                                <p>
+                                    A agregação é uma forma específica de associação que representa uma relação
+                                    "todo-parte".
+                                    Nesse tipo de relacionamento, uma classe é composta por outras classes (partes),
+                                    mas as partes também podem existir independentemente da classe principal. A
+                                    principal
+                                    vantagem da agregação é que ela permite modelar objetos complexos através de
+                                    composição,
+                                    mantendo uma relação de independência entre eles. <br>
+                                    <i>Por exemplo, uma classe "Universidade"
+                                        pode ser composta por várias classes "Aluno", mas os alunos também podem existir
+                                        independentemente da universidade.</i>
+                                </p>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <h3>
+                            2- DESCREVA AS REGRAS USADAS PARA DEFINIR OS PRINCIPAIS TIPOS DE RELACIONAMENTOS ENTRE AS
+                            CLASSES.
+                        </h3>
+
+                        <ol>
+                            <li>
+                                <p>
+                                    Agregação<br>
+                                    Regra: A agregação é uma relação de "todo-parte" entre duas classes, onde uma classe
+                                    é composta por outras classes (partes), mas as partes podem existir
+                                    independentemente da classe principal.
+
+
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Composição<br>
+                                    Regra: A composição é uma relação de "todo-parte" mais forte que a agregação. Nesse
+                                    caso, as
+                                    partes são criadas e destruídas juntamente com a classe principal, ou seja, a classe
+                                    principal é
+                                    responsável por gerenciar as classes componentes.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Herança<br>
+                                    Regra: A herança é um tipo de relação entre uma classe base (superclasse) e uma
+                                    classe derivada
+                                    (subclasse). A classe derivada herda os atributos e métodos da classe base e pode
+                                    adicionar
+                                    comportamentos específicos ou sobrescrever os comportamentos existentes.
+                                </p>
+                            </li>
+                        </ol>
+                        <h3><strong>Representação</strong></h3>
+
+                        <figure>
+                            <img src="/curso-solid/imagens/setas.png"
+                                alt="Criação de uma classe que utiliza a Sobrecarga no método Somar" />
+                            <figcaption>
+                                <p>Fonte: <a href="https://www.macoratti.net/net_uml1.htm" target="_blank">Macoratti</a>
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                    </li>
+                    <li>
+                        <h3>3- QUAL A DIFERENÇA ENTRE HERANÇA E COMPOSIÇÃO?</h3>
+
+
+                        <ul>
+                            <li>
+                                <h5>Herança</h5>
+                                <p>
+                                <ol>
+                                    <li>
+                                        A herança estabelece uma relação hierárquica entre classes;
+                                    </li><br>
+                                    <li>
+                                        Na herança, a subclasse herda atributos e métodos da superclasse;
+                                    </li><br>
+                                    <li>
+                                        Na herança, a subclasse é uma especialização da superclasse e pode adicionar ou
+                                        sobrescrever
+                                        comportamentos
+                                    </li><br>
+                                    <li>
+                                        A herança pode levar a uma hierarquia de classes complexa e potencialmente
+                                        rígida
+                                    </li><br>
+                                </ol>
+
+
+                            </li>
+                            <li>
+                                <h5>Composição</h5>
+                                <ol>
+                                    <li>
+                                        A composição estabelece
+                                        uma relação de "todo-parte";
+                                    </li><br>
+                                    <li>
+                                        Na composição, a classe principal contém objetos das classes
+                                        componentes como membros, mas as classes componentes não herdam atributos ou
+                                        métodos da
+                                        classe principal;
+                                    </li><br>
+                                    <li>
+                                        Na composição, as partes podem ser objetos independentes que podem
+                                        ser utilizados em diferentes contextos.
+                                    </li><br>
+                                    <li>
+                                        A composição é mais flexível e modular.
+                                    </li><br>
+                                </ol>
+                            </li>
+                        </ul>
+
+
+                    </li>
+                    <li>
+                        <h3>4-QUAIS AS VANTAGENS EM USAR COMPOSIÇÃO SOBRE A HERANÇA?</h3>
+                        <ul>
+                            <li>
+                                <strong>Flexibilidade e modularidade:</strong> A composição permite que você crie
+                                objetos complexos a partir
+                                de partes menores e independentes. Isso torna o código mais flexível, pois as partes
+                                podem
+                                ser facilmente substituídas ou reutilizadas em diferentes contextos. Além disso, a
+                                composição facilita a criação de módulos separados e bem definidos, tornando o código
+                                mais
+                                modular e mais fácil de manter.
+
+                            </li><br>
+                            <li>
+                                <strong>Menor acoplamento:</strong> Composição reduz o acoplamento entre classes. Isso
+                                significa que as
+                                classes não estão fortemente ligadas umas às outras, tornando o código menos dependente
+                                e
+                                mais fácil de modificar sem afetar outras partes do sistema. Em contraste, a herança
+                                pode
+                                levar a um alto acoplamento entre classes, tornando o código mais difícil de entender e
+                                de
+                                alterar.
+
+                            </li><br>
+                            <li>
+                                <strong>Reutilização seletiva de funcionalidades: </strong>Com a composição, você pode
+                                escolher quais
+                                funcionalidades (métodos) das classes componentes deseja expor na classe principal. Isso
+                                possibilita uma maior granularidade no reuso de código, permitindo que você selecione
+                                apenas
+                                o que é necessário, evitando a herança de métodos desnecessários, o que pode acontecer
+                                na
+                                herança.
+                            </li><br>
+                            <li>
+                                <strong>Evita a "herança múltipla" e "problema do diamante":</strong> A composição
+                                contorna problemas
+                                associados à herança múltipla (quando uma classe herda de múltiplas superclasses) e ao
+                                "problema do diamante" (quando uma classe herda de duas superclasses que compartilham
+                                uma
+                                classe base comum). Essas situações podem causar conflitos e ambiguidades na herança,
+                                mas
+                                com a composição, você pode agregar funcionalidades sem esses problemas.
+                            </li><br>
+                            <li>
+                                <strong>Facilidade em modificar comportamento:</strong> Com a composição, é mais fácil
+                                adicionar ou
+                                alterar o comportamento da classe principal, simplesmente alterando as classes
+                                componentes
+                                associadas. Na herança, as mudanças podem afetar toda a hierarquia de classes e exigir
+                                um
+                                esforço maior para manter a consistência no sistema.
+
+                            </li><br>
+                            <li>
+                                <strong>Possibilidade de encapsulamento:</strong> A composição permite um maior controle
+                                sobre o acesso aos
+                                membros da classe componente. Você pode escolher quais atributos e métodos das classes
+                                componentes devem ser expostos publicamente ou mantidos como detalhes internos,
+                                oferecendo
+                                um melhor encapsulamento do código.
+                            </li><br>
+                        </ul>
+
+
+
+                    <li>
+                        <h3>5-QUAL A DIFERENÇA ENTRE COMPOSIÇÃO E AGREGAÇÃO?</h3>
+                        <p>
+                            A principal diferença entre composição e agregação está na dependência de tempo de vida
+                            entre a classe principal e as classes componentes:<br><br>
+
+                            Na composição, as partes são criadas e destruídas juntamente com a classe principal, e as
+                            partes não podem existir independentemente da classe principal.<br>
+                            Na agregação, as partes podem existir independentemente da classe principal, e a dependência
+                            de tempo de vida entre elas é mais fraca, permitindo maior flexibilidade e reutilização.
+                            <br /><br />
+                        </p>
+                    </li>
+                    <li>
+                        <h3>
+                            6-QUAL A DIFERENÇA ENTRE INTERFACE E CLASSE ABSTRATA?
+                        </h3>
+                        <p>
+                            A principal diferença entre interfaces e classes abstratas está na natureza dos seus membros
+                            e na forma como são usados nas classes derivadas:
+                        <ul>
+                            <li>
+                                Interfaces definem apenas as assinaturas dos métodos que devem ser implementados pelas
+                                classes que a implementam, permitindo herança múltipla e promovendo o polimorfismo.
+
+                            </li>
+                            <li>
+                                Classes abstratas podem conter tanto métodos abstratos (que devem ser implementados nas
+                                subclasses) quanto métodos concretos (com implementação), mas não podem ser instanciadas
+                                diretamente e permitem herança simples.
+
+                            </li>
+                        </ul>
+
+
+
+                        <br /><br />
+
+                    </li>
+                    <li>
+                        <h3>7-O QUE É ACOPLAMENTO ENTRE CLASSES? </h3>
+                        <p>
+                            O acoplamento entre classes é um conceito que representa o grau de dependência e
+                            interdependência entre classes em um sistema de programação orientada a objetos. Quando duas
+                            classes estão fortemente acopladas, significa que elas têm uma conexão mais estreita, ou
+                            seja, uma classe depende fortemente da outra para realizar suas tarefas. Por outro lado, um
+                            baixo acoplamento indica que as classes têm menos dependência entre si, tornando o sistema
+                            mais flexível e fácil de manter.
+                        </p>
+
+                    </li>
+                    <li>
+                        <h3>
+                            O QUE É POLIMORFISMO?</i>
+                        </h3>
+                        <p>
+                            Polimorfismo é um dos quatro pilares da programação orientada a objetos (POO), juntamente
+                            com encapsulamento, herança e abstração. É uma característica poderosa da POO que permite
+                            que objetos de diferentes classes sejam tratados de forma uniforme, ou seja, um único código
+                            pode trabalhar com objetos de diferentes tipos de forma transparente, sem a necessidade de
+                            conhecer a classe específica de cada objeto.
+
+                            Existem dois tipos principais de polimorfismo:
+                        <ol>
+                            <li>
+                                Polimorfismo de Sobrecarga (Polimorfismo Estático):
+                                Também conhecido como polimorfismo de tempo de compilação.
+                                Ocorre quando duas ou mais funções têm o mesmo nome, mas parâmetros diferentes.
+                                O compilador escolhe a função correta para chamar com base nos argumentos passados
+                                durante a
+                                compilação.
+                                </p>
+                                <h3>Exemplo de <strong>Polimorfismo de Sobrecarga</strong></h3>
+
+                                <figure>
+                                    <img src="/curso-solid/imagens/ClasseSomar.JPG"
+                                        alt="Criação de uma classe que utiliza a Sobrecarga no método Somar" />
+                                    <figcaption>
+                                        <code>
+                        public class Calcular { //propriedade private string
+                        MensagemPadrão { get; set; } public Calcular() {
+                        this.MensagemPadrão = "Nenhum valor informado"; } //métodos
+                        public void Somar(int numero1, int numero2) {
+                        Console.WriteLine(numero1 + numero2); } public void
+                        Somar(double numero1, double numero2) {
+                        Console.WriteLine(numero1 + numero2); } public void Somar()
+                        { Console.WriteLine(this.MensagemPadrão); } }
+                      </code>
+                                    </figcaption>
+                                </figure>
+                                <p>
+                                    Nesse exemplo, a classe "Calculadora" possui duas funções "somar", uma que recebe
+                                    dois
+                                    inteiros e outra que recebe dois números de ponto flutuante. O compilador escolherá
+                                    a função
+                                    correta com base nos argumentos passados.
+                                </p>
+
+                            </li>
+                            <li>
+                                <p>
+                                    Também conhecido como polimorfismo de tempo de execução ou polimorfismo de herança.
+                                    Ocorre quando uma classe derivada (subclasse) pode substituir um método da classe
+                                    base
+                                    (superclasse) fornecendo uma implementação diferente para esse método.
+                                    O polimorfismo de substituição é geralmente alcançado através da herança e do uso de
+                                    métodos
+                                    abstratos (ou métodos com a mesma assinatura) nas classes base e derivadas.
+
+
+                                </p>
+
+                                <h3>Exemplo de <strong>Polimorfismo de Substituição (Polimorfismo Dinâmico)</strong>
+                                </h3>
+
+
+                                <figure>
+                                    <img src="/curso-solid/imagens/Override.png"
+                                        alt="Criação de uma classe que utiliza a override" />
+                                    <figcaption>
+                                        <code>
+                                            public class Animal
+                                            {
+                                                public string Nome { get; set; }
+                                                public virtual void EmitirSom()
+                                                {
+                                                    Console.WriteLine("O animal emite um som.");
+                                                }
+                                            }
+                                            public class Cachorro : Animal 
+                                            {
+                                                public override void EmitirSom()
+                                                {
+                                                    Console.WriteLine("O cachorro está latindo.");
+                                                }
+                                                
+                                            }
+                              </code>
+                                    </figcaption>
+                                </figure>
+                                <p>
+                                    Neste exemplo, temos uma classe base "Animal" com um método "EmitirSom". A classe
+                                    derivada "Cachorro" substitue esse método com suas próprias implementações
+                                    específicas. Isso permite que um objeto da classe "Animal" seja tratado de forma
+                                    polimórfica, chamando o método "EmitirSom" e, em tempo de execução, o método correto
+                                    da classe derivada será executado, dependendo do tipo real do objeto.
+                                </p>
+
+                            </li>
+                        </ol>
+
+
+
+
+                    </li>
+
+
+                    <br /><br />
+                    </li>
+                    <li>
+                        <h3>
+                            9- EM UM PROJETO C# TEMOS A INTERFACE E CLASSES DESCRITAS ABAIXO:
+                        </h3>
+                        <figure>
+                            <img src="/curso-solid/imagens/exercicios.png" alt="" />
+                            <p>Fonte: <a href="https://www.udemy.com/course/c-aplicando-principios-solid-na-pratica/"
+                                    target="_blank">Macoratti - Curso:C# - Aplicando Princípios SOLID na prática</a>
+
+                        </figure>
+                        <h3>
+                            <ol>
+                                <li>Crie uma instância da classe Transacao e execute os métodos.</li><br>
+                                <li>Qual o resultado final esperado ?</li><br>
+                                <li>Você precisa que a classe Transacao utilize o método Imprimir(). Você tem duas
+                                    opções :<br>
+
+                                    1- Criar a interface IRelatorio e definir o contrato com este método ou <br>
+                                    2- Criar uma classe Relatorio implementando o método.<br>
+
+
+                                </li>
+
+                            </ol>
+                        </h3>
+                        <br /><br />
+
+
+                        <h3> <strong>Classe Transação </strong></h3>
+
+                        <figure>
+                            <img src="/curso-solid/imagens/exe091.png"
+                                alt="Criação de uma classe com herança e interface" />
+                            <figcaption>
+                                <code>
+                                    public class ConectarBancoDados
+                                    {
+                                
+                                        public virtual void Conectar()
+                                        {
+                                            Console.WriteLine("Conectar banco de dados.");
+                                        }
+                                    }
+                                    public class Transacao : ConectarBancoDados, Itransacao
+                                    { 
+                                       
+                                        public void Executar()
+                                        {
+                                            Console.WriteLine("Processando .....");
+                                        }
+                                        
+                                    }
+                      </code>
+                            </figcaption>
+                        </figure>
+                        <p>
+
+                        </p>
+                        <h3> <strong>Instanciando a classe Transação</strong></h3>
+
+                        <figure>
+                            <img src="/curso-solid/imagens/metodos091.png" alt="Executando métodos" />
+                            <figcaption>
+                                <code>
+                                    {Transacao transacao = new Transacao();
+                                    transacao.Executar();
+                                    transacao.Conectar();
+                                    }
+                                    
+                      </code>
+                            </figcaption>
+                        </figure>
+                        <h3> <strong>Executando Métodos</strong></h3>
+                        <p></p>
+
+                        <figure>
+                            <img src="/curso-solid/imagens/executandometodos.png" alt="Executando métodos" />
+                            <figcaption>
+                                <code>
+                                    {Transacao transacao = new Transacao();
+                                    transacao.Executar();
+                                    transacao.Conectar();
+                                    }
+                                    
+                      </code>
+                            </figcaption>
+                        </figure>
+                        <h3> <strong>1- Criando a interface IRelatorio e definindo o contrato com este método</strong></h3>
+                        <p></p>
+
+                        <figure>
+                            <img src="/curso-solid/imagens/transacaoimprimindo.png" alt="Executando métodos" />
+                            <figcaption>
+                                <code>
+                                    public class ConectarBancoDados
+                                    {
+                                
+                                        public virtual void Conectar()
+                                        {
+                                            Console.WriteLine("Conectar banco de dados.");
+                                        }
+                                    }
+                                    public class Transacao : ConectarBancoDados, Itransacao, IRelatorio
+                                    { 
+                                       
+                                        public void Executar()
+                                        {
+                                            Console.WriteLine("Processando .....");
+                                        }
+                                        public void Imprimir()
+                                        {
+                                            Console.WriteLine("Imprimindo .....");
+                                        }
+                                
+                                    }
+                                
+                                    interface Itransacao
+                                    {
+                                        void Executar();
+                                    }
+                                    interface IRelatorio
+                                    {
+                                        void Imprimir();
+                                    }
+                                    
+                      </code>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <h3>10- Crie uma classe Animal com uma propriedade Tipo, um construtor onde podemos
+                            definir o tipo de animal e um método Mover() que iremos usar para simular o movimento
+                            de um animal.
+                            A seguir crie uma classe Peixe e uma classe Ave que devem usar o construtor da classe
+                            Animal para definir o seu tipo e devem implementar o método Mover() característico à sua
+                            espécie (peixe nada e ave voa);
+                            A classe Animal não poderá ser instanciada e vai servir como classe base para as demais
+                            classes.</h3>
+                        
+                        <iframe  widht = "640" height = "360" src="https://www.youtube.com/watch?v=Sjp5vgkZFTk"frameborder="0" allowfullscreen></iframe>                
+
+                        <br /><br />
+                    
+                        <br /><br />
+                     
+                    </li>
+                </ul>
+            </article>
+        </main>
+
+        <footer>
             <figure>
                 <a href="https://github.com/monica88lima?tab=repositories" target="_blank">
-                <img src="/imagens/icons8-divisão-de-código-50.png" alt=" git"></a>
-                
-                <a href="https://www.linkedin.com/in/monicalima/"target="_blank">
-                <img src="/imagens/icons8-linkedin-50.png"alt="linkedin"></a>
-                
-                <a href="tel:+55119521839">
-                <img src="/imagens/icons8-telefone-50.png"alt="telefone"></a>
-    
-             </figure>
-    </footer>
+                    <img src="/imagens/icons8-divisão-de-código-50.png" alt=" git" /></a>
+
+                <a href="https://www.linkedin.com/in/monicalima/" target="_blank">
+                    <img src="/imagens/icons8-linkedin-50.png" alt="linkedin" /></a>
+
+                <a href="tel:11952183958">
+                    <img src="/imagens/icons8-telefone-50.png" alt="telefone" /></a>
+            </figure>
+        </footer>
+    </div>
 </body>
+
 </html>
